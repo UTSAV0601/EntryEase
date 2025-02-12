@@ -1,31 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import { getEmployees } from '../services/employeeService';
+import React, { useContext } from 'react';
+import { EmployeeContext } from '../context/EmployeeContext';
+import EmployeeCard from './EmployeeCard';
 
 const EmployeeList = () => {
-  const [employees, setEmployees] = useState([]);
-  const [error, setError] = useState(null);
+  const { employees, loading } = useContext(EmployeeContext);
 
-  useEffect(() => {
-    getEmployees()
-      .then((response) => {
-        setEmployees(response.data);
-      })
-      .catch((err) => {
-        setError("Failed to fetch employees");
-        console.error(err);
-      });
-  }, []);
-
-  if (error) return <p>{error}</p>;
+  if (loading) return <p>Loading employees...</p>;
 
   return (
-    <ul>
-      {employees.map((employee) => (
-        <li key={employee.id}>
-          {employee.name} - {employee.email}
-        </li>
-      ))}
-    </ul>
+    <div>
+      <h1>Employees</h1>
+      {employees.length === 0 ? <p>No employees found.</p> : employees.map((emp) => <EmployeeCard key={emp.id} employee={emp} />)}
+    </div>
   );
 };
 

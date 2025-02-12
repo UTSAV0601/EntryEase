@@ -1,45 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { EmployeeContext } from '../context/EmployeeContext';
+import '../styles/EmployeeForm.css';
 
-const EmployeeForm = ({ onAddEmployee }) => {
-  const [formData, setFormData] = useState({ name: '', phone: '', email: '' });
+const EmployeeForm = () => {
+  const { addEmployee } = useContext(EmployeeContext);
+  const [employee, setEmployee] = useState({ name: '', phone: '', role: '' });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setEmployee({ ...employee, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddEmployee(formData);
-    setFormData({ name: '', phone: '', email: '' });
+    addEmployee(employee);
+    setEmployee({ name: '', phone: '', role: '' });
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        value={formData.name}
-        onChange={handleChange}
-        placeholder="Name"
-        required
-      />
-      <input
-        type="text"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        placeholder="Phone Number"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-        placeholder="Email"
-        required
-      />
+    <form className="employee-form" onSubmit={handleSubmit}>
+      <h2>Add New Employee</h2>
+      <input type="text" name="name" placeholder="Name" value={employee.name} onChange={handleChange} required />
+      <input type="text" name="phone" placeholder="Phone" value={employee.phone} onChange={handleChange} required />
+      <input type="text" name="role" placeholder="Role" value={employee.role} onChange={handleChange} required />
       <button type="submit">Add Employee</button>
     </form>
   );

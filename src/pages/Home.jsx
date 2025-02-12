@@ -1,10 +1,14 @@
 import React from 'react';
+import '../styles/Home.css';
 
-const Home = () => (
-  <div>
-    <h1>Welcome to GlobalLogic Onboarding Portal</h1>
-    <p>Your seamless journey begins here.</p>
-  </div>
-);
+const Home = () => {
+  return (
+    <div>
+      <h1>Welcome to GlobalLogic Onboarding Portal</h1>
+      <p>Streamline your onboarding process efficiently.</p>
+    </div>
+  );
+};
 
 export default Home;
+

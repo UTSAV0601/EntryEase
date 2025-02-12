@@ -1,0 +1,15 @@
+.home-container {
+    text-align: center;
+    margin-top: 100px;
+    padding: 40px;
+}
+
+.home-container h1 {
+    color: white;
+    font-size: 36px;
+}
+
+.home-container p {
+    font-size: 18px;
+    color: #f0f0f0;
+}

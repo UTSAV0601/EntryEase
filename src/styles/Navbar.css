@@ -1,0 +1,43 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+
+  
+  .burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  .burger-menu:hover {
+    opacity: 0.8;
+  }
+  
+

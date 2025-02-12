@@ -1,0 +1,37 @@
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #1e1e2f;
+    color: white;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar-nav a {
+    display: block;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .sidebar-nav a:hover {
+    background: #34344a;
+  }
+  
+  .page-content.sidebar-open {
+    margin-left: 250px;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  
+
+  

@@ -1,21 +1,16 @@
-import React, { useState } from 'react';
-import EmployeeForm from '../components/EmployeeForm';
+import React from 'react';
 import EmployeeList from '../components/EmployeeList';
+import '../styles/Employees.css';
 
 const Employees = () => {
-  const [employees, setEmployees] = useState([]);
-
-  const handleAddEmployee = (employee) => {
-    setEmployees([...employees, { id: Date.now(), ...employee }]);
-  };
-
   return (
     <div>
-      <h2>Employee Management</h2>
-      <EmployeeForm onAddEmployee={handleAddEmployee} />
-      <EmployeeList employees={employees} />
+      <h1>Employees</h1>
+      <EmployeeList />
     </div>
   );
 };
 
 export default Employees;
+
+

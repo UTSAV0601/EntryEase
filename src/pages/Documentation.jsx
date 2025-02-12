@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/Documentation.css';
 
 const Documentation = () => {
   return (
@@ -48,36 +49,6 @@ const Documentation = () => {
         </ul>
       </section>
 
-      <section>
-        <h2>FAQs</h2>
-        <div className="faq">
-          <h3>1. How do I access my company email?</h3>
-          <p>
-            You will receive an email from the IT department with setup instructions. If you haven't received it, contact <strong>it-support@globallogic.com</strong>.
-          </p>
-        </div>
-
-        <div className="faq">
-          <h3>2. Where do I report issues during onboarding?</h3>
-          <p>
-            You can reach out to the HR team via the <strong>HR Helpdesk</strong> at <a href="mailto:hr@globallogic.com">hr@globallogic.com</a>.
-          </p>
-        </div>
-
-        <div className="faq">
-          <h3>3. What are the working hours?</h3>
-          <p>
-            The standard working hours are 9:00 AM - 6:00 PM, Monday to Friday. Check with your manager for any specific changes.
-          </p>
-        </div>
-
-        <div className="faq">
-          <h3>4. How do I request leave?</h3>
-          <p>
-            You can request leave via the company HR portal under the "Leave Management" section.
-          </p>
-        </div>
-      </section>
     </div>
   );
 };
