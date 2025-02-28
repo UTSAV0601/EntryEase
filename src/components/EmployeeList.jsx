@@ -9,7 +9,6 @@ const EmployeeList = () => {
 
   return (
     <div>
-      <h1>Employees</h1>
       {employees.length === 0 ? <p>No employees found.</p> : employees.map((emp) => <EmployeeCard key={emp.id} employee={emp} />)}
     </div>
   );

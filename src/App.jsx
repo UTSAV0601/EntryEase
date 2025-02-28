@@ -35,7 +35,7 @@ const App = () => {
       </div>
 
       <footer className="footer">
-        <p>© {new Date().getFullYear()} EntryEase. All Rights Reserved.</p>
+        <p>© {new Date().getFullYear()} Globallogic. All Rights Reserved.</p>
       </footer>
     </EmployeeProvider>
   );
