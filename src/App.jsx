@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Employees from './pages/Employees';
 import Documentation from './pages/Documentation';
@@ -11,19 +10,14 @@ import Sidebar from './components/Sidebar';
 import './styles/global.css';
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
-
   return (
     <EmployeeProvider>
-      <Navbar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div className="app-container">
+        {/* Sidebar with links */}
+        <Sidebar />
 
-        <Sidebar isOpen={isSidebarOpen} />
-        
-
-        <div className={`page-content ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+        {/* Main content area */}
+        <div className="page-content">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/employees" element={<Employees />} />
