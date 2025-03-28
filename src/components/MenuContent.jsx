@@ -12,14 +12,14 @@ import AssignmentRoundedIcon from '@mui/icons-material/AssignmentRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
 import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 import HelpRoundedIcon from '@mui/icons-material/HelpRounded';
-import { Link } from 'react-router-dom'; // Import Link from React Router
+import { Link } from 'react-router-dom'; 
 
 const mainListItems = [
-  { text: 'Home', icon: <HomeRoundedIcon />, link: '/home' },
-  { text: 'Employee', icon: <AnalyticsRoundedIcon />, link: '/employee' },
+  { text: 'Home', icon: <HomeRoundedIcon />, link: '/' },
+  { text: 'Employee', icon: <AnalyticsRoundedIcon />, link: '/employees' },
   { text: 'Documentation', icon: <PeopleRoundedIcon />, link: '/documentation' },
   { text: 'Add Employee', icon: <AssignmentRoundedIcon />, link: '/add-employee' },
-  { text: 'Progress Tracker', icon: <AssignmentRoundedIcon />, link: '/progress-tracker' },
+  { text: 'Progress Tracker', icon: <AssignmentRoundedIcon />, link: '/progress' },
 ];
 
 const secondaryListItems = [
@@ -31,7 +31,6 @@ const secondaryListItems = [
 export default function MenuContent() {
   return (
     <Stack sx={{ flexGrow: 1, p: 1, justifyContent: 'space-between' }}>
-      {/* Main List Items */}
       <List dense>
         {mainListItems.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: 'block' }}>
@@ -43,7 +42,6 @@ export default function MenuContent() {
         ))}
       </List>
 
-      {/* Secondary List Items */}
       <List dense>
         {secondaryListItems.map((item, index) => (
           <ListItem key={index} disablePadding sx={{ display: 'block' }}>

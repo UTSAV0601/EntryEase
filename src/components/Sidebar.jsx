@@ -8,7 +8,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import MuiDrawer, { drawerClasses } from '@mui/material/Drawer';
 import MenuContent from './MenuContent';
-import CardAlert from './CardAlert';
 import OptionsMenu from './OptionsMenu';
 
 const drawerWidth = 240;
@@ -63,7 +62,6 @@ const Sidebar = () => {
           <Link to="/add-employee">Add Employee</Link>
           <Link to="/progress">Progress</Link>
         </div>
-        <CardAlert />
       </Box>
       <Stack
         direction="row"

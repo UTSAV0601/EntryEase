@@ -6,18 +6,18 @@ import IconButton from '@mui/material/IconButton';
 function MenuButton({ showBadge = false, ...props }) {
   return (
     <Badge
-      color="error"  // This sets the badge color to red
-      variant="dot"  // The badge is a small dot (you can change it to 'standard' for a number or text)
-      invisible={!showBadge}  // The badge is invisible when showBadge is false
-      sx={{ [`& .${badgeClasses.badge}`]: { right: 2, top: 2 } }}  // Customizes the position of the badge
+      color="error"  
+      variant="dot" 
+      invisible={!showBadge} 
+      sx={{ [`& .${badgeClasses.badge}`]: { right: 2, top: 2 } }}
     >
-      <IconButton size="small" {...props} />  {/* Renders the IconButton and spreads the passed props */}
+      <IconButton size="small" {...props} /> 
     </Badge>
   );
 }
 
 MenuButton.propTypes = {
-  showBadge: PropTypes.bool,  // Defines that showBadge is an optional boolean prop
+  showBadge: PropTypes.bool, 
 };
 
 export default MenuButton;

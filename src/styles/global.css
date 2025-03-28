@@ -9,12 +9,35 @@
 
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .app-container.light {
+    background-color: #ffffff;
+    color: #000000;
+  }
+  
+  .app-container.dark {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .content {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+  }
+  
+  .page-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  .dark-mode {
+    background-color: #121212;
+    color: white;
+  }
+  
 
 
 #root {
@@ -24,21 +47,6 @@ body {
     width: 100%;
 }
 
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #00264d;
-    padding: 15px 30px;
-    width: 100%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
 
 .app-logo {
     width: 180px;
