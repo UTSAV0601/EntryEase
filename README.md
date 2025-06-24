@@ -1,4 +1,4 @@
-# GlobalLogic Onboarding Portal
+# EntryEase
 
 A modern employee onboarding portal built with React, TypeScript, Material-UI, and Node.js. This application provides a comprehensive onboarding experience with progress tracking, profile management, task completion, and document upload capabilities.
 
@@ -19,30 +19,24 @@ A modern employee onboarding portal built with React, TypeScript, Material-UI, a
 
 ## Installation & Setup
 
-1. **Clone or download this project**
-   ```bash
-   # If you have the project as a zip file, extract it
-   # If you have a git repository, clone it:
-   git clone <your-repo-url>
-   cd globallogic-onboarding-portal
-   ```
 
-2. **Install dependencies**
+
+1. **Install dependencies**
    ```bash
    npm install
    ```
 
-3. **Build the application**
+2. **Build the application**
    ```bash
    npm run build
    ```
 
-4. **Start the application**
+3. **Start the application**
    ```bash
    npm start
    ```
 
-5. **Open your browser**
+4. **Open your browser**
    - Navigate to `http://localhost:5000`
    - The application should load and show the login page
 
